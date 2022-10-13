@@ -23,16 +23,16 @@ const Home: NextPage = () => {
         <ul>
             <li>
               <Link href="/register">
-              <a>Crie sua Conta</a>
+              Crie sua Conta
               </Link>
               </li>
             <li>
               <Link href="/login">
-                <a>Login</a>
+                Login
               </Link></li>
             <li>
               <Link href="/extract">
-                <a>Veja seu Extrato</a>
+                Veja seu Extrato
                 </Link></li>
          </ul>
 
