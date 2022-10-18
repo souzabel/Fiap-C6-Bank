@@ -1,43 +1,13 @@
 import React, {useState, useEffect, FormEvent} from 'react'
 import { Typography, Container, CssBaseline,Box,TextField,
-     Checkbox, Button, FormControlLabel, Stack, Snackbar } from '@mui/material';
+     Checkbox, Button, FormControlLabel, Stack } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import MuiAlert, { AlertProps } from '@mui/material/Alert';
-import Link from 'next/link';
-
-
-const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
-  props,
-  ref,
-) {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-});
-
-
-
-
-type CopyProps = {
-    site: string;
-    sx?:object;
-}
-
-function Copyright(props:CopyProps){
-    return (
-        <Typography>
-            {'Copyright © '}
-            <Link color="inherit" href="https://www.avanade.com.br/">
-                {props.site}
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    )
-}
+import Copyright from '../components/utils/Copyright';
+import Snackbar from '../components/utils/Snackbar';
 
 const theme = createTheme();
 
 export default function LoginPage() {
-
 
 const [empresa, setEmpresa] = useState<string>('');
 const [nome, setNome] = useState('');
@@ -71,6 +41,7 @@ useEffect(()=>{
 useEffect(()=>{
 
     if(password && password.length < 6){
+        
         setError(true);
         setErrorMessage('A senha deve ter no mínimo 6 caracteres');
     }else if(password) {
@@ -83,9 +54,6 @@ useEffect(()=>{
 
 },[password]);
 
-const handleClose = ()=>{
-    setOpen(false);
-}
 
 const handleSubmit = (event: FormEvent<HTMLFormElement>)=>{
     // Previne o comportamento padrão do formulário, que seria recarregar a página.
@@ -107,11 +75,7 @@ const handleSubmit = (event: FormEvent<HTMLFormElement>)=>{
     <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
             <CssBaseline />
-                <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
-                    <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-                    Usuário autenticado com sucesso... aguarde...
-                    </Alert>
-                </Snackbar>
+                
 
 
 
@@ -135,7 +99,14 @@ const handleSubmit = (event: FormEvent<HTMLFormElement>)=>{
                 </Box>
              </Box>
             <Copyright site="www.avanade.com.br" sx={{mt:8, mb: 4}} />
+             
+                      {open && <Snackbar open={open} hide={6} message="Usuário autenticado com sucesso...Aguarde..."/>}
         </Container>
     </ThemeProvider>
   )
 }
+
+//tudo no react tem a ver com componetização
+//so posso retornar um componente e não dois
+// as extensões .jsx e .tsx permitem usar o html dentro do javascript
+//next.js facilita o desenvolvimento de aplicações react com server side rendering e outras funcionalidades que facilitam o desenvolvimento de aplicações react 
