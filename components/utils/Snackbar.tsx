@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Alert from './Alert';
+import Alert from './Alert'
 import {AlertColor, Snackbar as Container} from '@mui/material';
 
 type SnackbarProps = {
@@ -22,4 +22,5 @@ const handleClose = ()=>{
       </Alert>
     </Container>
   )
+}
 }
