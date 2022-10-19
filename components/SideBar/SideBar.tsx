@@ -7,8 +7,8 @@ import Menu from '../Menu';
 const SideBarContainer = styled.section`
     display: flex;
     flex-direction: column;
-    width: 360px;
-    background-color: #242424;
+    width: 300px;
+    background-color: #434343;
 `;
 
 export default function SideBar() {

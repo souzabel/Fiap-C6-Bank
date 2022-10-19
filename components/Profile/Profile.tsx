@@ -12,7 +12,7 @@ const ProfileContainer = styled.div`
     width: 100%;
     padding-bottom: 20px;
     h2, h3 {
-      margin: 0;
+      margin: 5px;
       font-weight: 400;
     }
     h2{
@@ -30,7 +30,7 @@ export default function Profile() {
   return (
     <ProfileContainer>
         <AvatarContainer>
-            <Avatar alt="Isabel Souza" src="https://avatars.githubusercontent.com/u/85114441?v=4" sx={{ width: 190, height: 190 }} />
+            <Avatar alt="Isabel Souza" src="https://avatars.githubusercontent.com/u/85114441?v=4" sx={{ width: 180, height: 180 }} />
             <h2>Isabel Souza</h2>
             <h3>FullStack Dev.</h3>
         </AvatarContainer>

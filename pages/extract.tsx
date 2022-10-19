@@ -1,6 +1,6 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import SideBar from '../components/SideBar';
+import ExtractContent from '../components/ExtractContent';
 
 const ExtractContainer = styled.div`
     display: flex;
@@ -13,10 +13,7 @@ export default function Extract(){
 
         <ExtractContainer>
             <SideBar/>
-            <section>
-                <h1>Extract</h1>
-                Aqui virá a listagem de extrato
-            </section>
+            <ExtractContent/>
         </ExtractContainer>
     )
 }
