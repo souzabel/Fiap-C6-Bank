@@ -10,7 +10,15 @@ const ProfileContainer = styled.div`
     font-family: sans-serif;
     background-color: #242424;
     width: 100%;
-    height: 450px;
+    padding-bottom: 20px;
+    h2, h3 {
+      margin: 0;
+      font-weight: 400;
+    }
+    h2{
+      margin-top: 10px;
+    }
+
 `;
 const AvatarContainer = styled.div`
     display: flex;
@@ -22,9 +30,9 @@ export default function Profile() {
   return (
     <ProfileContainer>
         <AvatarContainer>
-            <Avatar alt="Isabel Souza" src="https://avatars.githubusercontent.com/u/85114441?v=4" sx={{ width: 200, height: 200 }} />
+            <Avatar alt="Isabel Souza" src="https://avatars.githubusercontent.com/u/85114441?v=4" sx={{ width: 190, height: 190 }} />
             <h2>Isabel Souza</h2>
-            <h3>Software Engineer</h3>
+            <h3>FullStack Dev.</h3>
         </AvatarContainer>
     </ProfileContainer>
   )

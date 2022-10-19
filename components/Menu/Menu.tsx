@@ -11,6 +11,7 @@ const MenuContainer = styled.nav`
     ul {
         margin: 0;
         padding: 0;
+
         li {
             list-style: none;
             display: flex;
