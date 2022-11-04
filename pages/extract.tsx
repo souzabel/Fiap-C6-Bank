@@ -1,6 +1,7 @@
+import React from "react";
+import SideBar from "../components/SideBar";
 import styled from '@emotion/styled';
-import SideBar from '../components/SideBar';
-import ExtractContent from '../components/ExtractContent';
+import ExtractContent from "../components/ExtractContent";
 
 const ExtractContainer = styled.div`
     display: flex;
@@ -9,11 +10,10 @@ const ExtractContainer = styled.div`
 `
 
 export default function Extract(){
-    return (
-
+    return(
         <ExtractContainer>
-            <SideBar/>
-            <ExtractContent/>
+            <SideBar/>           
+            <ExtractContent/>    
         </ExtractContainer>
     )
 }
