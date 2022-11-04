@@ -22,3 +22,4 @@ export default function ExtractData(props:ExtractDataProps) {
     </div>
   )
 }
+
